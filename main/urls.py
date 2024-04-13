@@ -7,6 +7,6 @@ app_name = MainConfig.name
 
 # Пустые кавычки - идем от корня
 urlpatterns = [
-    path('', index, name='index'),
+    path('students/', index, name='index'),
     path('contact/', contact, name='contact'),
 ]
