@@ -1,16 +1,23 @@
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView, DetailView
 
 from main.models import Student
 
 
-# Create your views here.
-def index(request):
-    students_list = Student.objects.all()
-    context = {
-        'object_list': students_list,
-        'title': 'Главная'
-    }
-    return render(request, 'main/index.html', context)
+class StudentListView(ListView):
+    model = Student
+    template_name = 'main/index.html'
+
+
+# Функцию индекса заменили классовым методом - FBV сменили на CBV
+
+# def index(request):
+#     students_list = Student.objects.all()
+#     context = {
+#         'object_list': students_list,
+#         'title': 'Главная'
+#     }
+#     return render(request, 'main/index.html', context)
 
 
 def contact(request):
@@ -27,9 +34,14 @@ def contact(request):
     return render(request, 'main/contact.html', context)
 
 
-def view_student(request, pk):
-    student_item = get_object_or_404(Student, pk=pk)
-    context = {
-        'object': student_item,
-    }
-    return render(request, 'main/student_detail.html', context)
+class StudentDetailView(DetailView):
+    model = Student
+    template_name = 'main/student_detail.html'
+
+
+# def view_student(request, pk):
+#     student_item = get_object_or_404(Student, pk=pk)
+#     context = {
+#         'object': student_item,
+#     }
+#     return render(request, 'main/student_detail.html', context)
