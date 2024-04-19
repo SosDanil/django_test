@@ -9,7 +9,7 @@ def index(request):
         'object_list': Breed.objects.all()[:3],
         'title': 'Питомник - Главная',
     }
-    return render(request, 'dogs/index.html', context)
+    return render(request, 'dogs/student_list.html', context)
 
 
 def breeds(request):

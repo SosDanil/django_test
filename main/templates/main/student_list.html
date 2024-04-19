@@ -19,8 +19,16 @@
                 <div class="btn-group">
                     <a href="{% url 'main:view_student' object.pk %}" type="button"
                        class="btn btn-sm btn-outline-secondary">View</a>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                    <a href="{% url 'main:update_student' object.pk %}" type="button"
+                       class="btn btn-sm btn-outline-secondary">Edit</a>
+                    <a href="{% url 'main:delete_student' object.pk %}" type="button"
+                       class="btn btn-sm btn-outline-danger">Delete</a>
                 </div>
+                {% if object.is_active %}
+                    <a href="{% url 'main:toggle_activity' object.pk %}" class="btn btn-warning">Deactivate</a>
+                {% else %}
+                    <a href="{% url 'main:toggle_activity' object.pk %}" class="btn btn-success">Activate</a>
+                {% endif %}
             </div>
         </div>
     </div>
