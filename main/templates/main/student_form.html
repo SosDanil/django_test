@@ -5,6 +5,15 @@
     <div class="row">
         <div class="col-6">
             <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">
+                        {% if object %}
+                            Изменение студента
+                        {% else %}
+                            Добавление студента
+                        {% endif %}
+                    </h3>
+                </div>
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
