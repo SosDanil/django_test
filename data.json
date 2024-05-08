@@ -1,52 +1,66 @@
 [
   {
     "model": "main.student",
-    "pk": 1,
+    "pk": 10,
     "fields": {
-      "first_name": "Петр",
-      "last_name": "Петров",
+      "first_name": "Ivan",
+      "last_name": "Ivanon",
       "avatar": "",
+      "email": null,
       "is_active": true
     }
   },
   {
     "model": "main.student",
-    "pk": 2,
+    "pk": 11,
     "fields": {
-      "first_name": "Иван",
-      "last_name": "Иванов",
+      "first_name": "Petrov",
+      "last_name": "Petr",
       "avatar": "",
-      "is_active": true
-    }
-  },
-  {
-    "model": "main.student",
-    "pk": 3,
-    "fields": {
-      "first_name": "Семен",
-      "last_name": "Семенов",
-      "avatar": "",
+      "email": null,
       "is_active": false
     }
   },
   {
     "model": "main.student",
-    "pk": 4,
+    "pk": 12,
     "fields": {
-      "first_name": "Данил",
-      "last_name": "Клименко",
+      "first_name": "semenov",
+      "last_name": "semen",
       "avatar": "",
+      "email": null,
+      "is_active": false
+    }
+  },
+  {
+    "model": "main.student",
+    "pk": 13,
+    "fields": {
+      "first_name": "Danil",
+      "last_name": "Klimenko",
+      "avatar": "",
+      "email": "sos.daniL@sky.pro",
       "is_active": true
     }
   },
   {
     "model": "main.student",
-    "pk": 5,
+    "pk": 15,
     "fields": {
-      "first_name": "Алина",
-      "last_name": "Рин",
-      "avatar": "",
+      "first_name": "Огурчик",
+      "last_name": "Рик",
+      "avatar": "students/cucumber.jpg",
+      "email": null,
       "is_active": true
+    }
+  },
+  {
+    "model": "main.subject",
+    "pk": 1,
+    "fields": {
+      "title": "Python",
+      "description": "Django Python",
+      "student": 10
     }
   }
 ]

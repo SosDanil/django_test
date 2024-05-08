@@ -1,0 +1,46 @@
+[
+  {
+    "model": "materials.material",
+    "pk": 1,
+    "fields": {
+      "title": "test!!!",
+      "body": "test!!!",
+      "views_count": 5,
+      "is_published": true,
+      "slug": "test"
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 2,
+    "fields": {
+      "title": "test2",
+      "body": "test2",
+      "views_count": 7,
+      "is_published": true,
+      "slug": "test2"
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 3,
+    "fields": {
+      "title": "New test",
+      "body": "New test",
+      "views_count": 10,
+      "is_published": true,
+      "slug": "new-test"
+    }
+  },
+  {
+    "model": "materials.material",
+    "pk": 5,
+    "fields": {
+      "title": "Новый тест",
+      "body": "Новейший, отвечаю!",
+      "views_count": 4,
+      "is_published": true,
+      "slug": "novyij-test"
+    }
+  }
+]

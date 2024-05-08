@@ -16,12 +16,28 @@
     }
   },
   {
+    "model": "dogs.breed",
+    "pk": 3,
+    "fields": {
+      "name": "Колли",
+      "description": "милые кексики"
+    }
+  },
+  {
+    "model": "dogs.breed",
+    "pk": 4,
+    "fields": {
+      "name": "Пудель",
+      "description": "Белый и классный такой"
+    }
+  },
+  {
     "model": "dogs.dog",
     "pk": 1,
     "fields": {
       "name": "Пушок",
       "breed": 1,
-      "photo": "",
+      "photo": "dogs/правильная_овчарка.jpg",
       "birthdate": null
     }
   },
@@ -31,6 +47,26 @@
     "fields": {
       "name": "Лесси",
       "breed": 2,
+      "photo": "",
+      "birthdate": null
+    }
+  },
+  {
+    "model": "dogs.dog",
+    "pk": 3,
+    "fields": {
+      "name": "белоснежка",
+      "breed": 4,
+      "photo": "",
+      "birthdate": null
+    }
+  },
+  {
+    "model": "dogs.dog",
+    "pk": 4,
+    "fields": {
+      "name": "кексик",
+      "breed": 3,
       "photo": "",
       "birthdate": null
     }
