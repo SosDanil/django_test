@@ -1,15 +1,39 @@
 {% extends 'main/base.html' %}
 {% load my_tags %}
 {% block content %}
-<div class="col-md-4">
-    <div class="card mb-4 box-shadow">
-        <div class="card-body">
-            <p class="card-text">Имя: {{ object.first_name }}</p>
-            <p class="card-text">Фамилия: {{ object.last_name }}</p>
+<div class="col-12">
+    <div class="row">
+        <div class="col-6">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="card-title">Информация о студенте</h4>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Имя: {{ object.first_name }}</p>
+                    <p class="card-text">Фамилия: {{ object.last_name }}</p>
+                    <p class="card-text">Почта: {{ object.email }}</p>
+                </div>
+                <div class="card-footer">
+                    <img src="{{ object.avatar|mymedia }}"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="card-title">Предметы студента</h4>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        {% for subject in subjects %}
+                            <li>{{ subject }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-6">
-        <img src="{{ object.avatar|mymedia }}"/>
-    </div>
 </div>
+
+
 {% endblock %}
